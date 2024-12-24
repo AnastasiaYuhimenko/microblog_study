@@ -5,7 +5,7 @@ from flask import render_template
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Настя'}
+    user = {'username': 'Anastasia'}
     posts = [
         {'author': {'username': 'Vladik'}, 'body': 'Iˆm a goose'},
         dict(author={'username': 'Goose'}, body='Iˆm a Vladik')
