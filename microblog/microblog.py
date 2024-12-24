@@ -18,5 +18,10 @@ def test():
     return 'test app'
 
 
+@app.route('/user/<string:name>/<int:id>')
+def user_page(name, id):
+    return render_template('user_page.html', title='userpage', name=name, id=id)
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, port=5001)
