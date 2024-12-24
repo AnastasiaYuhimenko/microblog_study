@@ -2,16 +2,18 @@
 <html>
   <head>
     {% if title %}
-      <title>{ {title} } - Microblog</title>
+      <title>{{title}} - Microblog</title>
     {% else %}
       <title>Welcome to Microblog</title>
     {% endif %}
   </head>
 <body>
+
     <div>Microblog: <a href="/index">Home</a><div>
         <div>Test: <a href="/test">test app</a><div>
             <div>your page: <a href="/user/User/15">userpage</a><div>
     <hr>
     {% block content %}{% endblock %}
+
 </body>
 </html>
