@@ -9,10 +9,20 @@
   </head>
 <body>
 
-    <div>Microblog: <a href="/index">Home</a><div>
-        <div>Test: <a href="/test">test app</a><div>
-            <div>your page: <a href="/user/User/15">userpage</a><div>
+    <div>Microblog: <a href="{{ url_for('index') }}">Home</a></div>
+        <div>Test: <a href="{{ url_for('test') }}">test app</a></div>
+            <div>your page: <a href="/user/User/15">userpage</a></div>
+    <div>Sign in: <a href="{{ url_for('Login') }}">Sign in</a></div>
     <hr>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                </ul>
+                    {% endfor %}
+            {% endif %}
+        {% endwith %}
     {% block content %}{% endblock %}
 
 </body>

@@ -1,8 +1,4 @@
 import os
 
-
 class Config:
-    SECRET_KEY = os.environ.get('Secret key') or 'you-will-never-guess!'
-
-name = os.getlogin()
-
+  SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
